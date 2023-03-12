@@ -7,13 +7,17 @@
         <router-view />
         <v-fab-transition>
           <v-btn
-            color="pink"
-            dark
-            absolute
-            right
+            v-scroll="onScroll"
+            v-show="fab"
             fab
+            dark
+            fixed
+            bottom
+            right
+            color="primary"
+            @click="toTop"
           >
-            <v-icon>mdi-plus</v-icon>
+            <v-icon>mdi-arrow-up</v-icon>
           </v-btn>
         </v-fab-transition>
       </v-main>
@@ -35,11 +39,22 @@ export default {
 
   data: () => ({
     loading: true,
+    fab: false,
   }),
   mounted() {
     setTimeout(() => {
         this.loading = false
     }, 3000)
+  },
+  methods: {
+    onScroll (e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset ||   e.target.scrollTop || 0
+      this.fab = top > 20
+    },
+    toTop () {
+      this.$vuetify.goTo(0)
+    }
   }
 };
 </script>

@@ -1,37 +1,53 @@
 <template>
-    <div style="position:absolute; width: 100%; height:100%; top:0; left:0; z-index:10000; background-color:white">
-        <div style="margin-left: auto; margin-right: auto" :class="{ loader: true, fadeout: true }">
-            Loading...
+    <div style="padding-top: 20%;">
+        <div class="typewriter">
+            <h1><span>&lt;</span>Shubham Sharma<span>/&gt;</span></h1>
         </div>
     </div>
+    
 </template>
 <script>
     export default {
-        name: "SplashScreen"
+        name: "SplashScreen",
+        computed: {
+            deviceHeight(){
+                return this.$vuetify.breakpoint.height;
+            },
+            deviceWidth(){
+                return this.$vuetify.breakpoint.width;
+            },
+        },
     }
 </script>
 <style>
-    .loader {
-        background-color: #63ab97;
-        bottom: 0;
-        color: white;
-        display: block;
-        font-size: 32px;
-        left: 0;
-        overflow: hidden;
-        padding-top: 10vh;
-        position: fixed;
-        right: 0;
-        text-align: center;
-        top: 0;
+    .typewriter {
+        display: flex;
     }
-    .fadeout {
-        animation: fadeout 3s forwards;
+    
+    .typewriter h1 {
+        height: 50%;
+        font-family: Agustina, 'Babylonica', cursive;
+        font-size: 35px;
+        color: rgb(0, 0, 0);
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid rgb(0, 195, 255); /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+            typing 3.5s steps(23, end),
+            blink-caret .5s step-end;
     }
-    @keyframes fadeout {
-        to {
-            opacity: 0;
-            visibility: hidden;
-        }
+
+        /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 23% }
+    }
+
+        /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgb(0, 195, 255) }
     }
 </style>
