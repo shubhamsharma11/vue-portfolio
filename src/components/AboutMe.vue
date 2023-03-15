@@ -1,31 +1,28 @@
 <template>
   <v-container>
-    <v-row justify="center">
-      <h1 class="text-h3 font-weight-regular mb-5">
-        About
+    <v-row
+      align="center"
+      justify="center"
+    >
+      <h1 class="text-h3 font-weight-bold">
+        About Me
       </h1>
     </v-row>
-    <v-row>
+    <v-row
+      align="center"
+      justify="center"
+    >
       <v-col
-        md="5"
-        sm="12"
+        md="6"
+        cols="12"
       >
-        <AboutMeTask
-          :theme="theme"
-          width="480px"
-          height="300px"
-        />
-      </v-col>
-
-      <v-col>
-        <p class="text-body-1 font-weight-regular justify-center">
+        <p class="text-body-1 font-weight-regular">
           {{ greeting.subTitle }}
         </p>
 
         <v-card flat>
           <v-list
-            disabled
-            dense
+            disabled            
           >
             <v-list-item
               v-for="(item, i) in items"
@@ -39,6 +36,15 @@
             </v-list-item>
           </v-list>
         </v-card>
+      </v-col>
+      <v-col
+        md="6"
+        cols="12"
+      >
+        <AboutMeTask
+          :theme="theme"
+          width="100%"
+        />
       </v-col>
     </v-row>
   </v-container>

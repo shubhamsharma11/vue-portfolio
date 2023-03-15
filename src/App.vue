@@ -1,7 +1,7 @@
 <template>
   <v-theme-provider root>
     <splash-screen v-if="loading" />
-    <v-app>
+    <v-app app>
       <app-bar />
       <v-main>
         <router-view />
@@ -44,7 +44,7 @@ export default {
   mounted() {
     setTimeout(() => {
         this.loading = false
-    }, 3000)
+    }, 4000)
   },
   methods: {
     onScroll (e) {

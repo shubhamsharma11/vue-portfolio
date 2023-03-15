@@ -43,15 +43,7 @@ export default {
   name: 'SocialMedia',
 
   data: () => ({
-    social: [
-      {
-        color: '#55ACEE',
-        icon: 'mdi-twitter',
-      },
-      {
-        color: '#3B5998',
-        icon: 'mdi-facebook',
-      },
+    social: [      
       {
         color: '#DD4b39',
         icon: 'mdi-google',
@@ -63,10 +55,6 @@ export default {
       {
         color: '#333333',
         icon: 'mdi-github',
-      },
-      {
-        color: '#e4405f',
-        icon: 'mdi-instagram',
       },
     ],
   }),

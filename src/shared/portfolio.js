@@ -87,124 +87,101 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
-      title: "Data Science & AI",
-      fileName: "DataScienceImg",
+      title: "Full Stack .NET Developement",
+      fileName: "FullStackDotNetImg",
       skills: [
-        "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases",
-        "⚡ Experience of working with Computer Vision and NLP projects",
-        "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
+        "⚡ Design and develop web applications using the .NET framework and related technologies.",
+        "⚡ Collaborate with cross-functional teams to understand business requirements and translate them into technical specifications.",
+        "⚡ Develop software solutions using both front-end and back-end technologies, including C#, ASP.NET, MVC, JavaScript, HTML, CSS, Vue.js, and other related technologies.",
+        "⚡ Design and implement database structures, including database schema design, data modeling, and database optimization.",
+        "⚡ Develop and maintain RESTful APIs and other web services using technologies such as Web API, and .NET Core.",
+        "⚡ Perform code reviews, debugging, and troubleshooting of software defects.",
+        "⚡ Collaborate with team members to ensure code quality and adherence to coding standards.",
+        "⚡ Participate in agile software development processes, including sprint planning, backlog grooming, daily stand-ups, and sprint retrospectives.",
+        "⚡ Mentor junior team members and contribute to the development of best practices and coding standards.",
       ],
-      softwareSkills: [
+      tools: [ 
         {
-          skillName: "Tensorflow",
-          fontAwesomeClassname: "logos-tensorflow",
+          skillName: "C#",
+          icon: "skill-icons:cs",
           style: {
             backgroundColor: "transparent",
+            "font-size": "50px",
           },
         },
         {
-          skillName: "Keras",
-          fontAwesomeClassname: "simple-icons:keras",
+          skillName: "Dot Net",
+          icon: "skill-icons:dotnet",
           style: {
-            backgroundColor: "white",
+            backgroundColor: "transparent",
+            "font-size": "50px",        
+          },
+        },
+        {
+          skillName: "HTML5",
+          icon: "skill-icons:html",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",    
+          },
+        },
+        {
+          skillName: "CSS3",
+          icon: "skill-icons:css",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",      
+          },
+        },
+        {
+          skillName: "Java Script",
+          icon: "skill-icons:javascript",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",      
+          },
+        },
+        
+        {
+          skillName: "Vue JS",
+          icon: "skill-icons:vuejs-light",
+          style: {
+            backgroundColor: "transparent",
             color: "#D00000",
-          },
-        },
-        {
-          skillName: "PyTorch",
-          fontAwesomeClassname: "logos-pytorch",
-          style: {
-            backgroundColor: "transparent",
-          },
-        },
-        {
-          skillName: "Python",
-          fontAwesomeClassname: "ion-logo-python",
-          style: {
-            backgroundColor: "transparent",
-            color: "#3776AB",
+            "font-size": "50px",
           },
         },
       ],
     },
     {
-      title: "Full Stack Development",
-      fileName: "FullStackImg",
-      skills: [
-        "⚡ Building resposive website front end using React-Redux",
-        "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "⚡ Creating application backend in Node, Express & Flask",
+      title: "Android Developement",
+      fileName: "AndroidDevImg",
+      skills: [       
+        "⚡ Designing and building mobile applications for the Android platform using Java and Kotlin",
+        "⚡ Collaborating with cross-functional teams to define, design, and ship new features." ,
+        "⚡ Writing clean, maintainable, and testable code that meets the highest quality standards." ,
+        "⚡ Conducting code reviews to ensure that the code meets the best practices and adheres to the development standards." ,
+        "⚡ Troubleshooting and debugging issues related to the application, and providing timely resolutions." ,
+        "⚡ Developing and implementing new features based on user feedback and emerging trends in the mobile app development industry." ,
+        "⚡ Staying up-to-date with the latest trends, tools, and techniques in mobile app development, and sharing knowledge with the team.",
+        "⚡ Collaborating with UI/UX designers to create an intuitive and attractive user interface.",
+        "⚡ Ensuring that the application is compatible with different versions of the Android operating system and devices.",
       ],
-      softwareSkills: [
+      tools: [
         {
-          skillName: "HTML5",
-          fontAwesomeClassname: "simple-icons:html5",
+          skillName: "Kotlin",
+          icon: "skill-icons:kotlin-light",
           style: {
-            color: "#E34F26",
+            backgroundColor: "transparent",
+            "font-size": "50px",
           },
         },
         {
-          skillName: "CSS3",
-          fontAwesomeClassname: "fa-css3",
+          skillName: "Java",
+          icon: "skill-icons:java-light",
           style: {
-            color: "#1572B6",
-          },
-        },
-        {
-          skillName: "Sass",
-          fontAwesomeClassname: "simple-icons:sass",
-          style: {
-            color: "#CC6699",
-          },
-        },
-        {
-          skillName: "JavaScript",
-          fontAwesomeClassname: "simple-icons:javascript",
-          style: {
-            backgroundColor: "#000000",
-            color: "#F7DF1E",
-          },
-        },
-        {
-          skillName: "ReactJS",
-          fontAwesomeClassname: "simple-icons:react",
-          style: {
-            color: "#61DAFB",
-          },
-        },
-        {
-          skillName: "NodeJS",
-          fontAwesomeClassname: "simple-icons:node-dot-js",
-          style: {
-            color: "#339933",
-          },
-        },
-        {
-          skillName: "NPM",
-          fontAwesomeClassname: "simple-icons:npm",
-          style: {
-            color: "#CB3837",
-          },
-        },
-        {
-          skillName: "Yarn",
-          fontAwesomeClassname: "simple-icons:yarn",
-          style: {
-            color: "#2C8EBB",
-          },
-        },
-        {
-          skillName: "Gatsby",
-          fontAwesomeClassname: "simple-icons:gatsby",
-          style: {
-            color: "#663399",
-          },
-        },
-        {
-          skillName: "Flutter",
-          fontAwesomeClassname: "simple-icons:flutter",
-          style: {
-            color: "#02569B",
+            backgroundColor: "transparent",
+            "font-size": "50px",
           },
         },
       ],
@@ -213,111 +190,352 @@ const skills = {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on multiple cloud platforms",
-        "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "⚡ Deploying deep learning models on cloud to use on mobile devices",
-        "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+        "⚡ Designing and implementing the necessary infrastructure to support the software development process.", 
+        "⚡ Automating the software development processto improve the efficiency of the software development process",
+        "⚡ Managing and maintaining CI/CD pipelines for managing and maintaining continuous integration and continuous delivery (CI/CD).", 
+        "⚡ Monitoring and troubleshooting to identify and resolve issues, and ensure the availability of the system.", 
+        "⚡ Collaborate with development, testing, and operations teams to ensure the smooth running of the software development process.",
+        "⚡ Manage and maintain cloud computing services and infrastructure, including deploying and scaling applications in the cloud.",
       ],
-      softwareSkills: [
-        {
-          skillName: "GCP",
-          fontAwesomeClassname: "simple-icons:googlecloud",
-          style: {
-            color: "#4285F4",
-          },
-        },
-        {
-          skillName: "AWS",
-          fontAwesomeClassname: "simple-icons:amazonaws",
-          style: {
-            color: "#FF9900",
-          },
-        },
-        {
-          skillName: "Azure",
-          fontAwesomeClassname: "simple-icons:microsoftazure",
-          style: {
-            color: "#0089D6",
-          },
-        },
-        {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
-          style: {
-            color: "#FFCA28",
-          },
-        },
-        {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
-          style: {
-            color: "#336791",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#47A248",
-          },
-        },
+      tools: [
         {
           skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
+            icon: "skill-icons:docker",
+            style: {
+              backgroundColor: "transparent",
+              "font-size": "50px",
+            },
+          },       
+        {
+          skillName: "Azure Devops",
+          icon: "skill-icons:azure-light",
           style: {
-            color: "#1488C6",
+            backgroundColor: "transparent",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Azure Portal",
+          icon: "teenyicons:azure-solid",
+          style: {
+            backgroundColor: "transparent",
+            color: "#3776AB",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Jenkins",
+          icon: "skill-icons:jenkins-light",
+          style: {
+            backgroundColor: "transparent",
+            color: "#D00000",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Jenkins",
+          icon: "skill-icons:powershell-light",
+          style: {
+            backgroundColor: "transparent",
+            color: "#D00000",
+            "font-size": "50px",
           },
         },
         {
           skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
+          icon: "simple-icons:kubernetes",
           style: {
             color: "#326CE5",
+            "font-size": "50px",
           },
         },
       ],
     },
     {
-      title: "UI/UX Design",
-      fileName: "DesignImg",
-      skills: [
-        "⚡ Designing highly attractive user interface for mobile and web applications",
-        "⚡ Customizing logo designs and building logos from scratch",
-        "⚡ Creating the flow of application functionalities to optimize user experience",
-      ],
-      softwareSkills: [
+      title: "Software Developement Tools",
+      fileName: "ToolsImg",
+      tools: [
         {
-          skillName: "Adobe XD",
-          fontAwesomeClassname: "simple-icons:adobexd",
+          skillName: "Visual Studio Code",
+          icon: "logos:visual-studio-code",
           style: {
-            color: "#FF2BC2",
+            backgroundColor: "transparent",
+            "font-size": "50px",  
           },
         },
         {
-          skillName: "Figma",
-          fontAwesomeClassname: "simple-icons:figma",
+          skillName: "Visual Studio",
+          icon: "logos:visual-studio",
           style: {
-            color: "#F24E1E",
+            backgroundColor: "transparent",
+            "font-size": "50px",    
           },
         },
         {
-          skillName: "Adobe Illustrator",
-          fontAwesomeClassname: "simple-icons:adobeillustrator",
+          skillName: "Android Studio",
+          icon: "skill-icons:androidstudio-light",
           style: {
-            color: "#FF7C00",
+            backgroundColor: "transparent",
+            "font-size": "50px",
+          },
+        },              
+        {
+          skillName: "MySql",
+          icon: "skill-icons:mysql-light",
+          style: {
+            backgroundColor: "transparent",
+            color: "#D00000",
+            "font-size": "50px",
           },
         },
         {
-          skillName: "Inkscape",
-          fontAwesomeClassname: "simple-icons:inkscape",
+          skillName: "Postman",
+          icon: "skill-icons:postman",
           style: {
-            color: "#000000",
+            backgroundColor: "transparent",
+            "font-size": "50px",
           },
         },
       ],
     },
   ],
 };
+
+
+// const skills1 = {
+//   data: [
+//     {
+//       title: "Data Science & AI",
+//       fileName: "DataScienceImg",
+//       skills: [
+//         "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases",
+//         "⚡ Experience of working with Computer Vision and NLP projects",
+//         "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
+//       ],
+//       softwareSkills: [
+//         {
+//           skillName: "Tensorflow",
+//           fontAwesomeClassname: "logos-tensorflow",
+//           style: {
+//             backgroundColor: "transparent",
+//           },
+//         },
+//         {
+//           skillName: "Keras",
+//           fontAwesomeClassname: "simple-icons:keras",
+//           style: {
+//             backgroundColor: "white",
+//             color: "#D00000",
+//           },
+//         },
+//         {
+//           skillName: "PyTorch",
+//           fontAwesomeClassname: "logos-pytorch",
+//           style: {
+//             backgroundColor: "transparent",
+//           },
+//         },
+//         {
+//           skillName: "Python",
+//           fontAwesomeClassname: "ion-logo-python",
+//           style: {
+//             backgroundColor: "transparent",
+//             color: "#3776AB",
+//           },
+//         },
+//       ],
+//     },
+//     {
+//       title: "Full Stack Development",
+//       fileName: "FullStackImg",
+//       skills: [
+//         "⚡ Building resposive website front end using React-Redux",
+//         "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
+//         "⚡ Creating application backend in Node, Express & Flask",
+//       ],
+//       softwareSkills: [
+//         {
+//           skillName: "HTML5",
+//           fontAwesomeClassname: "simple-icons:html5",
+//           style: {
+//             color: "#E34F26",
+//           },
+//         },
+//         {
+//           skillName: "CSS3",
+//           fontAwesomeClassname: "fa-css3",
+//           style: {
+//             color: "#1572B6",
+//           },
+//         },
+//         {
+//           skillName: "Sass",
+//           fontAwesomeClassname: "simple-icons:sass",
+//           style: {
+//             color: "#CC6699",
+//           },
+//         },
+//         {
+//           skillName: "JavaScript",
+//           fontAwesomeClassname: "simple-icons:javascript",
+//           style: {
+//             backgroundColor: "#000000",
+//             color: "#F7DF1E",
+//           },
+//         },
+//         {
+//           skillName: "ReactJS",
+//           fontAwesomeClassname: "simple-icons:react",
+//           style: {
+//             color: "#61DAFB",
+//           },
+//         },
+//         {
+//           skillName: "NodeJS",
+//           fontAwesomeClassname: "simple-icons:node-dot-js",
+//           style: {
+//             color: "#339933",
+//           },
+//         },
+//         {
+//           skillName: "NPM",
+//           fontAwesomeClassname: "simple-icons:npm",
+//           style: {
+//             color: "#CB3837",
+//           },
+//         },
+//         {
+//           skillName: "Yarn",
+//           fontAwesomeClassname: "simple-icons:yarn",
+//           style: {
+//             color: "#2C8EBB",
+//           },
+//         },
+//         {
+//           skillName: "Gatsby",
+//           fontAwesomeClassname: "simple-icons:gatsby",
+//           style: {
+//             color: "#663399",
+//           },
+//         },
+//         {
+//           skillName: "Flutter",
+//           fontAwesomeClassname: "simple-icons:flutter",
+//           style: {
+//             color: "#02569B",
+//           },
+//         },
+//       ],
+//     },
+//     {
+//       title: "Cloud Infra-Architecture",
+//       fileName: "CloudInfraImg",
+//       skills: [
+//         "⚡ Experience working on multiple cloud platforms",
+//         "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
+//         "⚡ Deploying deep learning models on cloud to use on mobile devices",
+//         "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+//       ],
+//       softwareSkills: [
+//         {
+//           skillName: "GCP",
+//           fontAwesomeClassname: "simple-icons:googlecloud",
+//           style: {
+//             color: "#4285F4",
+//           },
+//         },
+//         {
+//           skillName: "AWS",
+//           fontAwesomeClassname: "simple-icons:amazonaws",
+//           style: {
+//             color: "#FF9900",
+//           },
+//         },
+//         {
+//           skillName: "Azure",
+//           fontAwesomeClassname: "simple-icons:microsoftazure",
+//           style: {
+//             color: "#0089D6",
+//           },
+//         },
+//         {
+//           skillName: "Firebase",
+//           fontAwesomeClassname: "simple-icons:firebase",
+//           style: {
+//             color: "#FFCA28",
+//           },
+//         },
+//         {
+//           skillName: "PostgreSQL",
+//           fontAwesomeClassname: "simple-icons:postgresql",
+//           style: {
+//             color: "#336791",
+//           },
+//         },
+//         {
+//           skillName: "MongoDB",
+//           fontAwesomeClassname: "simple-icons:mongodb",
+//           style: {
+//             color: "#47A248",
+//           },
+//         },
+//         {
+//           skillName: "Docker",
+//           fontAwesomeClassname: "simple-icons:docker",
+//           style: {
+//             color: "#1488C6",
+//           },
+//         },
+//         {
+//           skillName: "Kubernetes",
+//           fontAwesomeClassname: "simple-icons:kubernetes",
+//           style: {
+//             color: "#326CE5",
+//           },
+//         },
+//       ],
+//     },
+//     {
+//       title: "UI/UX Design",
+//       fileName: "DesignImg",
+//       skills: [
+//         "⚡ Designing highly attractive user interface for mobile and web applications",
+//         "⚡ Customizing logo designs and building logos from scratch",
+//         "⚡ Creating the flow of application functionalities to optimize user experience",
+//       ],
+//       softwareSkills: [
+//         {
+//           skillName: "Adobe XD",
+//           fontAwesomeClassname: "simple-icons:adobexd",
+//           style: {
+//             color: "#FF2BC2",
+//           },
+//         },
+//         {
+//           skillName: "Figma",
+//           fontAwesomeClassname: "simple-icons:figma",
+//           style: {
+//             color: "#F24E1E",
+//           },
+//         },
+//         {
+//           skillName: "Adobe Illustrator",
+//           fontAwesomeClassname: "simple-icons:adobeillustrator",
+//           style: {
+//             color: "#FF7C00",
+//           },
+//         },
+//         {
+//           skillName: "Inkscape",
+//           fontAwesomeClassname: "simple-icons:inkscape",
+//           style: {
+//             color: "#000000",
+//           },
+//         },
+//       ],
+//     },
+//   ],
+// };
 
 // Education Page
 const competitiveSites = {

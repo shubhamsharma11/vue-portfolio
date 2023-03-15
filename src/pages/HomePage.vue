@@ -1,45 +1,38 @@
 <template>
-  <v-container>
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col
-        md="6"
-        sm="12"
+  <v-container fluid>
+    <v-container class="mt-5">
+      <v-row
+        align="center"
+        justify="center"
       >
-        <h3 class="text-h1 font-weight-bold mb-4">
-          Hi! I'm {{ greeting.nickname }}
-        </h3>
-        <SocialMedia />
-      </v-col>
-      <v-col
-        lg="6"
-        md="12"
-      >
-        <FeelingProud
-          :theme="theme"
-          width="550px"
-          height="550px"
-        />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <AboutMe
-          :greeting="greeting"
-          :theme="theme"
-        />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <MySkills
-          :greeting="greeting"
-          :theme="theme"
-        />
-      </v-col>
-    </v-row>
+        <v-col
+          md="6"
+          cols="12"
+        >
+          <h3 class="text-h1 font-weight-bold mb-4">
+            Hi! I'm {{ greeting.nickname }}
+          </h3>
+          <SocialMedia />
+        </v-col>
+        <v-col
+          md="6"
+          cols="12"
+        >
+          <FeelingProud
+            :theme="theme"
+            width="100%"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+    <AboutMe
+      :greeting="greeting"
+      :theme="theme"
+    />
+    <MySkills
+      :greeting="greeting"
+      :theme="theme"
+    />
   </v-container>
 </template>
 
