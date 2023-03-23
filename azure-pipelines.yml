@@ -9,8 +9,6 @@ trigger:
 pool: myPool
 
 steps:
-- checkout: self
-  persistCredentials: true
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -20,6 +18,5 @@ steps:
     git config user.email "yourmail" 
     git config user.name "yourname"
     npm install
-    npm run build
     npm run deploy -- -r https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
   displayName: 'npm install and build'
