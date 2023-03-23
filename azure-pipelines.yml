@@ -6,8 +6,7 @@
 trigger:
 - source
 
-pool:
-  vmImage: ubuntu-latest
+pool: myPool
 
 steps:
 - checkout: self
