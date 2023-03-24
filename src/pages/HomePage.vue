@@ -9,9 +9,12 @@
           md="6"
           cols="12"
         >
-          <h3 class="text-h1 font-weight-bold mb-4">
+          <h3 class="text-h1 font-weight-bold">
             Hi! I'm {{ greeting.nickname }}
           </h3>
+          <h4 class="text-h6 font-weight-regular">
+            {{ greeting.subTitle }}
+          </h4>
           <SocialMedia />
         </v-col>
         <v-col
@@ -26,10 +29,12 @@
       </v-row>
     </v-container>
     <AboutMe
+      id="about"
       :greeting="greeting"
       :theme="theme"
     />
     <MySkills
+      id="skills"
       :greeting="greeting"
       :theme="theme"
     />

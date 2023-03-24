@@ -3,8 +3,9 @@
     <v-row
       align="center"
       justify="center"
+      class="mb-n16"
     >
-      <h1 class="text-h3 font-weight-bold">
+      <h1 class="text-h2 font-weight-bold">
         About Me
       </h1>
     </v-row>
@@ -13,11 +14,23 @@
       justify="center"
     >
       <v-col
-        md="6"
+        md="5"
         cols="12"
       >
+        <AboutMeTask
+          :theme="theme"
+          width="100%"
+        />
+      </v-col>
+      <v-col
+        md="7"
+        cols="12"
+      >
+        <p class="text-body-1 font-weight-bold">
+          WHO AM I ?
+        </p>
         <p class="text-body-1 font-weight-regular">
-          {{ greeting.subTitle }}
+          {{ greeting.description }}
         </p>
 
         <v-card flat>
@@ -36,15 +49,6 @@
             </v-list-item>
           </v-list>
         </v-card>
-      </v-col>
-      <v-col
-        md="6"
-        cols="12"
-      >
-        <AboutMeTask
-          :theme="theme"
-          width="100%"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -72,34 +76,19 @@
     data: () => ({
       items: [
         {
-          icon: 'mdi-account-circle',
-          title: 'Full Name',
-          value: 'Shubham Sharma',
-        },
-        {
-          icon: 'mdi-calendar-account',
-          title: 'Date of Birth',
-          value: '17 November 1995',
-        },
-        {
-          icon: 'mdi-cake-variant',
-          title: 'Age',
-          value: '29',
-        },
-        {
-          icon: 'mdi-phone',
+          icon: 'mdi-phone-outline',
           title: 'Phone',
           value: '+91 9098727192',
         },
         {
-          icon: 'mdi-email',
+          icon: 'mdi-email-outline',
           title: 'Email',
           value: 'ssharma0834@gmail.com',
         },
         {
-          icon: 'mdi-school',
-          title: 'Higher Education',
-          value: `Bachelor's of Engineering`,
+          icon: 'mdi-map-marker-outline',
+          title: 'Location',
+          value: 'Madhya Pradesh, India',
         },
       ],
     }),

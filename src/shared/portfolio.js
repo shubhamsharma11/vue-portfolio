@@ -22,8 +22,9 @@ const greeting = {
   title: "Shubham Sharma",
   logo_name: "ShubhamSharma",
   nickname: "Shubham",
-  subTitle:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+  subTitle: "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+  description: "Hey 👋, I'm a Full-Stack .NET Developer, Android Developer and Devops Engineer. I have completed my Bachelor degree in Information and Technologies. It is not only my professional background. It is also a passion that has grown since I was 16 years old." +
+    "This allowed me to learn to be autonomous and to learn on my own, and I always managed to overcome the obstacles and solve the problems I encountered !",
   resumeLink:
     "https://drive.google.com/open?id=1XYpYhLeqCdyx_q6l0bQoC7RgwQjAjXPf",
   portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
