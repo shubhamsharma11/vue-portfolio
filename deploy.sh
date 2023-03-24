@@ -34,6 +34,8 @@ git remote add origin https://github.com/shubhamsharma11/shubhamsharma11.github.
 
 # if you are deploying to https://<USERNAME>.github.io
 git push origin main
+Username: shubhamsharma11
+Password: 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
 # git@github.com:shubhamsharma11/shubhamsharma11.github.io.git main 
 # https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 # https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
