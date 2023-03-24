@@ -13,6 +13,10 @@ cd dist
 git config --global user.email "shubham.sharma.17@outlook.com"
 git config --global user.name "Shubham Sharma"
 
+git config --global credential.helper 'store --file ~/.my-credentials'
+printf "protocol=https\nhost=github.com\nusername=shubhamsharma11\npassword=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\n" | git credential-store --file ~/.my-credentials store
+
+
 # Initialized Git repository
 git init
 git add -A
