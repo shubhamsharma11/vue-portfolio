@@ -20,7 +20,9 @@ git commit -m 'deploy'
 git branch -M main
 
 # Setup remote origin 
-git remote add origin https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
+git remote add origin https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+
+# https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
 #https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
