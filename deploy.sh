@@ -9,9 +9,11 @@ npm run build
 # navigate into the build output directory
 cd dist
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+# Confugure author details
+git config --global user.email "shubham.sharma.17@outlook.com"
+git config --global user.name "Shubham Sharma"
 
+# Initialized Git repository
 git init
 git add -A
 git commit -m 'deploy'
