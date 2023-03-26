@@ -45,5 +45,7 @@ git push -u origin main
 # git@github.com:shubhamsharma11/shubhamsharma11.github.io.git main 
 # https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 # https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+# https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+# https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
 cd -
