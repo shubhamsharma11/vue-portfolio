@@ -19,7 +19,6 @@ steps:
   
 - script: |
     npm install
-    set -e
     npm run build
     cd dist
     git config --global user.email "shubham.sharma.17@outlook.com"
