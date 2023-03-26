@@ -19,5 +19,15 @@ steps:
 
 - script: |
     npm install
-    npm run deploy
+    set -e
+    npm run build
+    cd dist
+    git config --global user.email "shubham.sharma.17@outlook.com"
+    git config --global user.name "Shubham Sharma"
+    git init
+    git branch -M main
+    git add -A
+    git commit -m 'deploy'
+    git remote add origin https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+    git push -u origin main
   displayName: 'npm install and build'
