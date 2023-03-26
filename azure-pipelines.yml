@@ -31,7 +31,7 @@ steps:
   inputs:
     gitHubConnection: 'New Github Connection'
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
-    action: 'edit'
+    action: 'create'
     target: '$(Build.SourceVersion)'
     tag: 'v1.0.0'
     assetUploadMode: 'replace'
