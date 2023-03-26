@@ -6,7 +6,7 @@
 trigger:
 - source
 
-pool: 
+pool:
   vmImage: ubuntu-latest
 
 steps:
@@ -14,22 +14,24 @@ steps:
   inputs:
     versionSpec: '16.x'
   displayName: 'Install Node.js'
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
-    failOnStderr: true
+
 - script: |
     npm install
     npm run build
-    cd dist
-    git config --global user.email "shubham.sharma.17@outlook.com"
-    git config --global user.name "Shubham Sharma"
-    git init
-    git branch -M main
-    git add -A
-    git commit -m 'deploy'
-    git push -u https://$(secrets.github_token)github.com/shubhamsharma11/shubhamsharma11.github.io.git main
   displayName: 'npm install and build'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.'
+    ArtifactName: 'dist'
+    publishLocation: 'Container'
+  displayName: 'Publish build artifacts'
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'New Github Connection'
+    repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
