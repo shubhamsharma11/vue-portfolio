@@ -13,8 +13,8 @@ cd dist
 git config --global user.email "shubham.sharma.17@outlook.com"
 git config --global user.name "Shubham Sharma"
 
-git config --global credential.helper 'store --file ~/.my-credentials'
-printf "protocol=https\nhost=github.com\nusername=shubhamsharma11\npassword=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\n" | git credential-store --file ~/.my-credentials store
+# git config --global credential.helper 'store --file ~/.my-credentials'
+# printf "protocol=https\nhost=github.com\nusername=shubhamsharma11\npassword=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\n" | git credential-store --file ~/.my-credentials store
 
 
 # Initialized Git repository
@@ -24,11 +24,11 @@ git commit -m 'deploy'
 git branch -M main
 
 # Setup remote origin 
-git remote add origin https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
+# git remote add origin https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
 # https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
-# git remote set-url origin https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+git remote set-url origin https://shubhamsharma11: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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
 #https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
