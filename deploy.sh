@@ -21,7 +21,7 @@ git config --global user.name "Shubham Sharma"
 git init
 git add -A
 git commit -m 'deploy'
-git branch -M main
+# git branch -M main
 
 # Setup remote origin 
 # git remote add origin https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
@@ -34,8 +34,8 @@ git remote set-url origin https://shubhamsharma11:ghp_DegSsHHhdQEnWbfnvvR6lN1F8f
 
 # if you are deploying to https://<USERNAME>.github.io
 git push origin main -f
-Username: shubhamsharma11
-Password: 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
+# Username: shubhamsharma11
+# Password: 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
 # git@github.com:shubhamsharma11/shubhamsharma11.github.io.git main 
 # https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 # https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
