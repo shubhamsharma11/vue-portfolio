@@ -19,7 +19,6 @@ steps:
   
 - script: |
     npm install
-    set -e
     npm run build
     cd dist
     git config --global user.email "shubham.sharma.17@outlook.com"
@@ -28,5 +27,5 @@ steps:
     git branch -M main
     git add -A
     git commit -m 'deploy'
-    git push -u https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git main
+    git push -u https://github.com/shubhamsharma11/shubhamsharma11.github.io.git main
   displayName: 'npm install and build'
