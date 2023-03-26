@@ -19,9 +19,9 @@ git config --global user.name "Shubham Sharma"
 
 # Initialized Git repository
 git init
+git branch -M main
 git add -A
 git commit -m 'deploy'
-git branch -M main
 
 # Setup remote origin 
 # git remote add origin https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
