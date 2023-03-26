@@ -33,7 +33,7 @@ git remote set-url origin https://shubhamsharma11:ghp_DegSsHHhdQEnWbfnvvR6lN1F8f
 #https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f origin main
+git push -u origin main
 # Username: shubhamsharma11
 # Password: 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
 # git@github.com:shubhamsharma11/shubhamsharma11.github.io.git main 
