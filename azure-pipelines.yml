@@ -33,6 +33,7 @@ steps:
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    assetUploadMode: 'replace'
+    tagSource: 'userSpecifiedTag'
+    tag: 'v1.1.0'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
