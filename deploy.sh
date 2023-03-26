@@ -28,7 +28,7 @@ git commit -m 'deploy'
 
 # https://github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
-git remote set-url origin https://shubhamsharma11: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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+git remote add origin https://shubhamsharma11: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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
 #https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
 
