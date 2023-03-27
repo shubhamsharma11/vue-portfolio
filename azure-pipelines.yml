@@ -29,6 +29,8 @@ steps:
 
 - script: |
     ls
+    cd dist
+    ls
   displayName: 'list changes'
 
 # - task: PublishBuildArtifacts@1
