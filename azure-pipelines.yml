@@ -54,6 +54,5 @@ steps:
     tagSource: 'userSpecifiedTag'
     tag: 'v1.1.0'
     assets: '$(Build.ArtifactStagingDirectory)/dist/*'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
+    addChangeLog: false
   displayName: 'Create GitHub release'
