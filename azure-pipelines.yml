@@ -33,11 +33,9 @@ steps:
     echo "source"
     cd $(Build.SourcesDirectory)/dist
     ls
-    cd..
     echo "target"
     cd $(Build.ArtifactStagingDirectory)/dist
     ls
-    cd..
   displayName: 'list changes'
 
 - task: PublishBuildArtifacts@1
