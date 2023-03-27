@@ -49,9 +49,8 @@ steps:
   inputs:
     gitHubConnection: 'github.com_shubhamsharma11'
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
-    action: 'create'
+    action: 'edit'
     target: '$(Build.SourceVersion)'
-    tagSource: 'userSpecifiedTag'
     tag: 'v1.1.0'
     assets: '$(Build.ArtifactStagingDirectory)/dist/*'
     addChangeLog: false
