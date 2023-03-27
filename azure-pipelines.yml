@@ -65,7 +65,7 @@ steps:
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
     action: 'edit'
     target: '$(Build.SourceVersion)'
-    tag: 'v1.1.0'
+    tag: 'v1.1.1'
     title: 'Release $(tag)'
     releaseNotesSource: 'inline'
     releaseNotesInline: 'Built on $(Build.BuildDate)'
