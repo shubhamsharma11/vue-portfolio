@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  tag: 'v$(Build.BuildNumber)'
+
 steps:
 - task: NodeTool@0
   inputs:
@@ -61,8 +64,8 @@ steps:
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
     action: 'edit'
     target: '0014ace'
-    tag: '$(Build.BuildNumber)'
-    title: 'Release $(Build.BuildNumber)'
+    tag: '$(tag)'
+    title: 'Release $(tag)'
     releaseNotesSource: 'inline'
     releaseNotesInline: 'Built on $(Build.BuildDate)'
     assets: '$(Build.ArtifactStagingDirectory)/dist/*'
