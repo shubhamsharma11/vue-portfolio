@@ -20,9 +20,16 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/dist'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
+  displayName: 'Copy built files to artifact staging directory'
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
     ArtifactName: 'dist'
     publishLocation: 'Container'
   displayName: 'Publish build artifacts'
@@ -31,8 +38,11 @@ steps:
   inputs:
     gitHubConnection: 'github.com_shubhamsharma11'
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
-    action: 'edit'
+    action: 'create'
     target: '$(Build.SourceVersion)'
+    tagSource: 'userSpecifiedTag'
     tag: 'v1.1.0'
+    assets: '$(Build.ArtifactStagingDirectory)/dist/**'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
+  displayName: 'Create GitHub release'
