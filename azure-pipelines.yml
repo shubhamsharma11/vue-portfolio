@@ -10,6 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
+  system.debug: true
   tag: 'v$(Build.BuildNumber)'
 
 steps:
