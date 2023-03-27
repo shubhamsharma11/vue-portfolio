@@ -40,21 +40,22 @@ steps:
     cd..
   displayName: 'list changes'
 
-# - task: PublishBuildArtifacts@1
-#   inputs:
-#     PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
-#     ArtifactName: 'dist'
-#     publishLocation: 'Container'
-#   displayName: 'Publish build artifacts'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
+    ArtifactName: 'dist'
+    publishLocation: 'Container'
+  displayName: 'Publish build artifacts'
 
-# - task: GitHubRelease@1
-#   inputs:
-#     gitHubConnection: 'github.com_shubhamsharma11'
-#     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
-#     action: 'create'
-#     target: '$(Build.SourceVersion)'
-#     tagSource: 'userSpecifiedTag'
-#     tag: 'v1.1.0'
-#     changeLogCompareToRelease: 'lastFullRelease'
-#     changeLogType: 'commitBased'
-#   displayName: 'Create GitHub release'
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github.com_shubhamsharma11'
+    repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'userSpecifiedTag'
+    tag: 'v1.1.0'
+    assets: '$(Build.ArtifactStagingDirectory)/dist/*'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
+  displayName: 'Create GitHub release'
