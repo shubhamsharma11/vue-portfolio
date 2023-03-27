@@ -27,6 +27,10 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
   displayName: 'Copy built files to artifact staging directory'
 
+- script: |
+    ls
+  displayName: 'list changes'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
