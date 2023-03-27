@@ -34,7 +34,7 @@ steps:
     git branch -M main
     git add -A
     echo "commit"
-    git commit -m 'deploy'
+    git commit -m "deploy"
     echo "push"
     git push origin main
   displayName: 'npm install and build'
