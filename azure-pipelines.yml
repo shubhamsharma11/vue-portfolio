@@ -6,70 +6,30 @@
 trigger:
 - source
 
-pool:
+pool: 
   vmImage: ubuntu-latest
-
+  
 variables:
   system.debug: true
-  tag: 'v$(Build.BuildNumber)'
 
 steps:
+- checkout: self
+  persistCredentials: true
 - task: NodeTool@0
   inputs:
     versionSpec: '16.x'
   displayName: 'Install Node.js'
-
+  
 - script: |
     npm install
+    set -e
     npm run build
+    cd dist
+    git config --global user.email "shubham.sharma.17@outlook.com"
+    git config --global user.name "Shubham Sharma"
+    git init
+    git branch -M main
+    git add -A
+    git commit -m 'deploy'
+    git push -u https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git main
   displayName: 'npm install and build'
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/dist'
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
-  displayName: 'Copy built files to artifact staging directory'
-
-- script: |
-    echo "current"
-    ls
-    echo "source"
-    cd $(Build.SourcesDirectory)/dist
-    ls
-    echo "target"
-    cd $(Build.ArtifactStagingDirectory)/dist
-    ls
-  displayName: 'list changes'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
-    ArtifactName: 'dist'
-    publishLocation: 'Container'
-  displayName: 'Publish build artifacts'
-
-# - task: GitHubRelease@1
-#   inputs:
-#     gitHubConnection: 'github.com_shubhamsharma11'
-#     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
-#     action: 'edit'
-#     target: '$(Build.SourceVersion)'
-#     tag: 'v1.1.0'
-#     assets: '$(Build.ArtifactStagingDirectory)/dist/*'
-#     addChangeLog: false
-#   displayName: 'Create GitHub release'
-- task: GitHubRelease@1
-  inputs:
-    gitHubConnection: 'github.com_shubhamsharma11'
-    repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
-    action: 'edit'
-    target: '0014ace'
-    tag: '$(tag)'
-    title: 'Release $(tag)'
-    releaseNotesSource: 'inline'
-    releaseNotesInline: 'Built on $(Build.BuildDate)'
-    assets: '$(Build.ArtifactStagingDirectory)/dist/*'
-    assetUploadMode: 'replace'
-    addChangeLog: false
-  displayName: 'Create GitHub release'
