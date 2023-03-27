@@ -45,13 +45,26 @@ steps:
     publishLocation: 'Container'
   displayName: 'Publish build artifacts'
 
+# - task: GitHubRelease@1
+#   inputs:
+#     gitHubConnection: 'github.com_shubhamsharma11'
+#     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
+#     action: 'edit'
+#     target: '$(Build.SourceVersion)'
+#     tag: 'v1.1.0'
+#     assets: '$(Build.ArtifactStagingDirectory)/dist/*'
+#     addChangeLog: false
+#   displayName: 'Create GitHub release'
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'github.com_shubhamsharma11'
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
     action: 'edit'
     target: '$(Build.SourceVersion)'
-    tag: 'v1.1.0'
+    tag: '$(Build.BuildNumber)'
+    title: 'Release $(Build.BuildNumber)'
+    releaseNotesSource: 'inline'
+    releaseNotesInline: 'Built on $(Build.BuildDate)'
     assets: '$(Build.ArtifactStagingDirectory)/dist/*'
     addChangeLog: false
   displayName: 'Create GitHub release'
