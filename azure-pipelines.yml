@@ -28,16 +28,11 @@ steps:
     git config --global user.email "shubham.sharma.17@outlook.com"
     git config --global user.name "Shubham Sharma"
     git remote set-url origin https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
-    git remote -v
     git init
     git branch -M main
     git add -A
     echo "commit"
-    git commit -m 'deploy'    
-    echo "fetch"
-    git fetch --all
-    echo "pull"
-    git pull --all
+    git commit -m 'deploy'
     echo "push"
     git push -u origin main
   displayName: 'npm install and build'
