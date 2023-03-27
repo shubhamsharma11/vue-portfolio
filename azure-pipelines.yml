@@ -66,5 +66,6 @@ steps:
     releaseNotesSource: 'inline'
     releaseNotesInline: 'Built on $(Build.BuildDate)'
     assets: '$(Build.ArtifactStagingDirectory)/dist/*'
-    addChangeLog: false
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
   displayName: 'Create GitHub release'
