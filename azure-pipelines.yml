@@ -60,7 +60,7 @@ steps:
     gitHubConnection: 'github.com_shubhamsharma11'
     repositoryName: 'shubhamsharma11/shubhamsharma11.github.io'
     action: 'edit'
-    target: '$(Build.SourceVersion)'
+    target: '$(Build.BuildNumber)'
     tag: '$(Build.BuildNumber)'
     title: 'Release $(Build.BuildNumber)'
     releaseNotesSource: 'inline'
