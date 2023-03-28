@@ -36,5 +36,5 @@ steps:
     echo "commit"
     git commit -m "deploy"
     echo "push"
-    git push origin main
+    git push -f origin main
   displayName: 'npm install and build'
