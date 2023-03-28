@@ -29,7 +29,7 @@ steps:
     git config --global user.name "Shubham Sharma"
     echo "---------------"
     git remote -v
-    git rm remote orgin
+    git remote rm origin
     git remote -v
     git remote add origin https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma12.github.io.git
     git remote -v
