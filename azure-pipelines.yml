@@ -31,7 +31,7 @@ steps:
     git remote -v
     git remote rm origin
     git remote -v
-    git remote add origin https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma12.github.io.git
+    git remote add origin https://$(github_pat)@github.com/shubhamsharma11/shubhamsharma11.github.io.git
     git remote -v
     echo "---------------"
     git init
