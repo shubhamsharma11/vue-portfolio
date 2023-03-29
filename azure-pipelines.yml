@@ -20,29 +20,58 @@ steps:
     versionSpec: '16.14.2'
   displayName: 'Install Node.js'
   
-- script: |
-    npm install -g npm@latest
-    npm install
-    npm run build
-    cd dist
-  displayName: 'npm install and build'
+# - script: |
+#     npm install -g npm@latest
+#     npm install
+#     npm run build
+#     cd dist
+#   displayName: 'npm install and build'
 
-#   echo "--------------- Git Config ---------------"
-#   git config --global user.email "shubham.sharma.17@outlook.com"
-#   git config --global user.name "Shubham Sharma"
-#   echo "--------------- Add Origin ---------------"
-#   git remote -v
-#   git remote rm origin
-#   git remote -v
-#   git remote add origin https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
-#   git remote -v
-#   echo "--------------- Git Initialize ---------------"
-#   git init
-#   echo "--------------- Set Branch ---------------"
-#   git branch -M main
-#   echo "--------------- Stage Changes ---------------"
-#   git add -A
-#   echo "--------------- Commit Changes ---------------"
-#   git commit -m "deploy"
-#   echo "--------------- Push Changes ---------------"
-#   git push -f -u origin main
+- task: CmdLine@2
+  inputs:
+    script: |
+      npm install
+      npm run build
+      cd dist
+      echo "--------------- Git Config ---------------"
+      git config --global user.email "shubham.sharma.17@outlook.com"
+      git config --global user.name "Shubham Sharma"
+      echo "--------------- Add Origin ---------------"
+      git remote -v
+      git remote rm origin
+      git remote -v
+      git remote add origin https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+      git remote -v
+      echo "--------------- Git Initialize ---------------"
+      git init
+      echo "--------------- Set Branch ---------------"
+      git branch -M main
+      echo "--------------- Stage Changes ---------------"
+      git add -A
+      echo "--------------- Commit Changes ---------------"
+      git commit -m "deploy"
+      echo "--------------- Push Changes ---------------"
+      git push -f -u origin main
+    failOnStderr: true
+  displayName: 'npm install and build'
+    
+  
+  
+  
+  # git config --global user.name "Shubham Sharma"
+  # echo "--------------- Add Origin ---------------"
+  # git remote -v
+  # git remote rm origin
+  # git remote -v
+  # git remote add origin https://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@github.com/shubhamsharma11/shubhamsharma11.github.io.git
+  # git remote -v
+  # echo "--------------- Git Initialize ---------------"
+  # git init
+  # echo "--------------- Set Branch ---------------"
+  # git branch -M main
+  # echo "--------------- Stage Changes ---------------"
+  # git add -A
+  # echo "--------------- Commit Changes ---------------"
+  # git commit -m "deploy"
+  # echo "--------------- Push Changes ---------------"
+  # git push -f -u origin main
