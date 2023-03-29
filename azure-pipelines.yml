@@ -21,9 +21,8 @@ steps:
   displayName: 'Install Node.js'
   
 - script: |
-    echo "--------------- NPM Install ---------------"
     npm install -g npm@latest
-    echo "--------------- NPM Build ---------------"
+    npm install
     npm run build
     cd dist
   displayName: 'npm install and build'
