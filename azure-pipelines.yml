@@ -45,7 +45,6 @@ steps:
   inputs:
     script: |
       echo "--------------- Set Git Config ---------------"
-      cd dist
       git config --global user.email "shubham.sharma.17@outlook.com"
       git config --global user.name "Shubham Sharma"
   displayName: 'Set Git Config'
@@ -54,6 +53,9 @@ steps:
   inputs:
     script: |
       echo "--------------- Add Origin ---------------"
+      ls
+      cd dist
+      ls
       git remote -v
       git remote rm origin
       git remote -v
