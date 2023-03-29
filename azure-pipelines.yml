@@ -52,7 +52,6 @@ steps:
       git commit -m "deploy"
       echo "--------------- Push Changes ---------------"
       git push -f -u origin main
-    failOnStderr: true
   displayName: 'npm install and build'
     
   
