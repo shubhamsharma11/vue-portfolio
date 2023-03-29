@@ -7,7 +7,7 @@ trigger:
 - source
 
 pool: 
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
 
 variables:
   system.debug: true
