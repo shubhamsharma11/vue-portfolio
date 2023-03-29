@@ -22,7 +22,7 @@ steps:
   
 - script: |
     echo "--------------- NPM Install ---------------"
-    npm install
+    npm install -g npm@latest
     echo "--------------- NPM Build ---------------"
     npm run build
     cd dist
