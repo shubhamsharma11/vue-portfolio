@@ -25,6 +25,5 @@ jobs:
                 REPO: git@github.com:shubhamsharma11/shubhamsharma11.github.io.git
                 BRANCH: main
                 FOLDER: dist
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
                 KNOWN_HOSTS_FILE: resources/known_hosts
