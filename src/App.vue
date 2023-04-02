@@ -21,6 +21,7 @@
           </v-btn>
         </v-fab-transition>
       </v-main>
+      <app-footer />
     </v-app>
   </v-theme-provider>
 </template>
@@ -28,6 +29,7 @@
 <script>
 import SplashScreen from "./components/SplashScreen";
 import AppBar from "./components/AppBar";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   name: 'App',
@@ -35,6 +37,7 @@ export default {
   components: {
     SplashScreen,
     AppBar,
+    AppFooter,
   },
 
   data: () => ({

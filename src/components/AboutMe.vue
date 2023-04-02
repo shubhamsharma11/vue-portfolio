@@ -23,7 +23,8 @@
         />
       </v-col>
       <v-col
-        md="7"
+        md="6"
+        offset-md="1"
         cols="12"
       >
         <p class="text-body-1 font-weight-bold">

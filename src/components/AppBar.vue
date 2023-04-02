@@ -19,17 +19,6 @@
 
       <template v-for="(item, i) in menuItems">
         <v-btn
-          v-if="item.scroll === 'true'"
-          :key="i"
-          text
-          plain
-          @click="scrollToElement(item.to)"
-          class="d-none d-md-flex" 
-        >
-          {{ item.title }}
-        </v-btn>
-        <v-btn
-          v-else
           :key="i"
           text
           plain
@@ -75,22 +64,9 @@
         nav
         dense
       >
-      
-      
         <v-list-item-group>
           <v-list-item v-for="(item, index) in menuItems" :key="index">
             <v-btn
-              v-if="item.scroll == 'true'"
-              :key="index"
-              text
-              plain
-              block
-              @click="scrollToElement(item.to)"
-            >
-              {{ item.title }}
-            </v-btn>
-            <v-btn
-              v-else
               :key="index"
               text
               plain
@@ -124,16 +100,6 @@ export default {
           scroll: 'false',
         },
         {
-          title: 'About',
-          to: 'about',
-          scroll: 'true',
-        },
-        {
-          title: 'Skills',
-          to: 'skills',
-          scroll: 'true',
-        },
-        {
           title: 'Experience',
           to: '/experience',
           scroll: 'false',
@@ -154,15 +120,7 @@ export default {
   methods:{
     darkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    },
-
-    scrollToElement(el) {
-      const element = document.getElementById(el);
-
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    },
+    },    
   }
 };
 </script>
