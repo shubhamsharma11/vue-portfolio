@@ -23,11 +23,13 @@
           text
           plain
           :to="item.to"
-          class="d-none d-md-flex" 
+          class="d-none d-md-flex px-5" 
         >
           {{ item.title }}
         </v-btn>
       </template>
+      
+      <v-spacer></v-spacer>
 
       <div>
         <v-btn
