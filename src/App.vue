@@ -1,12 +1,13 @@
 <template>
   <v-theme-provider root>
-    <splash-screen v-if="loading" />
+    <splash-screen v-if="loading && settings.isSplash" />
     <v-app app>
-      <app-bar />
+      <app-bar :isTheme="settings.isTheme"/>
       <v-main>
         <router-view />
         <v-fab-transition>
           <v-btn
+            v-if="settings.isGoTop"
             v-scroll="onScroll"
             v-show="fab"
             fab
@@ -30,6 +31,7 @@
 import SplashScreen from "./components/SplashScreen";
 import AppBar from "./components/AppBar";
 import AppFooter from "./components/AppFooter.vue";
+import { settings } from "./shared/portfolio";
 
 export default {
   name: 'App',
@@ -43,6 +45,7 @@ export default {
   data: () => ({
     loading: true,
     fab: false,
+    settings: settings,
   }),
   mounted() {
     setTimeout(() => {

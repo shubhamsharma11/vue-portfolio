@@ -3,6 +3,15 @@
     <v-row
       align="center"
       justify="center"
+      class="mt-5"
+    >
+      <h1 class="text-h2 font-weight-bold">
+        {{ contact.contactSection.title }}
+      </h1>
+    </v-row>
+    <v-row
+      align="center"
+      justify="center"
     >
       <v-col
         md="6"
@@ -17,10 +26,12 @@
         offset-md="1"
         cols="12"
       >
+        <p class="text-body-1 font-weight-regular">
+          {{ contact.contactSection.description }}
+        </p>
         <v-form
           ref="form"
           v-model="valid"
-          lazy-validation
         >
           <v-text-field
             v-model="name"
@@ -42,17 +53,20 @@
           <v-textarea
             v-model="message"
             outlined
-            label="Comments"
+            label="Message"
+            placeholder="Type your message here..."
             required
           ></v-textarea>
 
+          <p class="text-caption font-weight-light font-italic"> {{  contact.contactSection.note }} </p>
+
           <v-btn
             :disabled="!valid"
-            color="success"
+            color="primary"
             class="mr-4"
             @click="submitForm"
           >
-            Submit
+            Send Message
           </v-btn>
 
           <v-btn
@@ -70,14 +84,16 @@
 </template>
 
 <script>
+import { contactPageData } from "../shared/portfolio";
+
 export default {
   data() {
     return {
+      contact: contactPageData,
       name: '',
       email: '',
       message: '',
-
-      valid: true,
+      valid: false,
       nameRules: [
         v => !!v || 'Name is required',
         v => (v && v.length <= 20) || 'Name must be less than 20 characters',
@@ -90,7 +106,7 @@ export default {
   },
   methods: {
     submitForm() {
-      if(this.$refs.form.validate())
+      if(this.validate())
       {
         const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdWEMAnahCcSj08FVyfk4pv3eSsNxaYGmwRnDqOvk6JI9d2qg/formResponse';
         const formData = new FormData();
@@ -115,11 +131,15 @@ export default {
       else
       {
         alert('Validation Failed !!!');
+        this.reset();
       }
     },
     reset () {
       this.$refs.form.reset()
     },
+    validate () {
+      return this.$refs.form.validate()
+    }
   },
 };
 </script>

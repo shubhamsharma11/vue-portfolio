@@ -7,7 +7,7 @@
       no-gutters
     >
       <v-col
-        class="text-center pa-2"
+        class="text-center pa-6"
         cols="12"
       >
         <strong>Made with ❤️ by Shubham Sharma</strong>

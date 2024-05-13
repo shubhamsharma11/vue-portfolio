@@ -2,7 +2,9 @@
 
 // Website related settings
 const settings = {
-  isSplash: true, // Change this to false if you don't want Splash screen.
+  isSplash: false, // Change this to false if you don't want Splash screen.
+  isTheme: true, // Change this to false if you don't want Change Theme button.
+  isGoTop: false, // Change this to false if you don't want Go to Top button.
 };
 
 //SEO Related settings
@@ -22,14 +24,39 @@ const greeting = {
   title: "Shubham Sharma",
   logo_name: "ShubhamSharma",
   nickname: "Shubham",
-  subTitle: "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
-  description: "Hey 👋, I'm a Full-Stack .NET Developer, Android Developer and Devops Engineer. I have completed my Bachelor degree in Information and Technologies. It is not only my professional background. It is also a passion that has grown since I was 16 years old." +
+  subTitle:
+    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+  description:
+    "Hey 👋, I'm a Full-Stack .NET Developer, Android Developer and Devops Engineer. I have completed my Bachelor degree in Information and Technologies. It is not only my professional background. It is also a passion that has grown since I was 16 years old." +
     "This allowed me to learn to be autonomous and to learn on my own, and I always managed to overcome the obstacles and solve the problems I encountered !",
   resumeLink:
     "https://drive.google.com/open?id=1XYpYhLeqCdyx_q6l0bQoC7RgwQjAjXPf",
   portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
   githubProfile: "https://github.com/ashutosh1919",
 };
+
+const menuItems = [
+  {
+    title: 'Home',
+    to: '/',
+    scroll: 'false',
+  },
+  {
+    title: 'Experience',
+    to: '/experience',
+    scroll: 'false',
+  },
+  // {
+  //   title: 'Project',
+  //   to: '/projects',
+  //   scroll: 'false',
+  // },
+  {
+    title: 'Contact',
+    to: '/contact',
+    scroll: 'false',
+  },
+];
 
 const socialMediaLinks = [
   /* Your Social Media Link */
@@ -101,7 +128,7 @@ const skills = {
         "⚡ Participate in agile software development processes, including sprint planning, backlog grooming, daily stand-ups, and sprint retrospectives.",
         "⚡ Mentor junior team members and contribute to the development of best practices and coding standards.",
       ],
-      tools: [ 
+      tools: [
         {
           skillName: "C#",
           icon: "skill-icons:cs",
@@ -115,7 +142,7 @@ const skills = {
           icon: "skill-icons:dotnet",
           style: {
             backgroundColor: "transparent",
-            "font-size": "50px",        
+            "font-size": "50px",
           },
         },
         {
@@ -123,7 +150,7 @@ const skills = {
           icon: "skill-icons:html",
           style: {
             backgroundColor: "transparent",
-            "font-size": "50px",    
+            "font-size": "50px",
           },
         },
         {
@@ -131,7 +158,7 @@ const skills = {
           icon: "skill-icons:css",
           style: {
             backgroundColor: "transparent",
-            "font-size": "50px",      
+            "font-size": "50px",
           },
         },
         {
@@ -139,10 +166,9 @@ const skills = {
           icon: "skill-icons:javascript",
           style: {
             backgroundColor: "transparent",
-            "font-size": "50px",      
+            "font-size": "50px",
           },
         },
-        
         {
           skillName: "Vue JS",
           icon: "skill-icons:vuejs-light",
@@ -152,18 +178,132 @@ const skills = {
             "font-size": "50px",
           },
         },
+        {
+          skillName: "Visual Studio Code",
+          icon: "logos:visual-studio-code",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Visual Studio",
+          icon: "logos:visual-studio",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "MySql",
+          icon: "skill-icons:mysql-light",
+          style: {
+            backgroundColor: "transparent",
+            color: "#D00000",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Postman",
+          icon: "skill-icons:postman",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",
+          },
+        },
+      ],
+    },
+    {
+      title: "Cloud Infra-Architecture",
+      fileName: "CloudInfraImg",
+      skills: [
+        "⚡ Designing and implementing the necessary infrastructure to support the software development process.",
+        "⚡ Automating the software development process to improve the efficiency of the software development process",
+        "⚡ Managing and maintaining CI/CD pipelines for continuous integration and continuous delivery (CI/CD).",
+        "⚡ Monitoring and troubleshooting to identify and resolve issues, and ensure the availability of the system.",
+        "⚡ Collaborate with development, testing, and operations teams to ensure the smooth running of the software development process.",
+        "⚡ Manage and maintain cloud computing services and infrastructure, including deploying and scaling applications in the cloud.",
+      ],
+      tools: [        
+        {
+          skillName: "Azure Devops",
+          icon: "skill-icons:azure-light",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Jenkins",
+          icon: "skill-icons:jenkins-light",
+          style: {
+            backgroundColor: "transparent",
+            color: "#D00000",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Azure Portal",
+          icon: "teenyicons:azure-solid",
+          style: {
+            backgroundColor: "transparent",
+            color: "#3776AB",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Powershell",
+          icon: "skill-icons:powershell-light",
+          style: {
+            backgroundColor: "transparent",
+            color: "#D00000",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Docker",
+          icon: "skill-icons:docker",
+          style: {
+            backgroundColor: "transparent",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Ansible",
+          icon: "simple-icons:ansible",
+          style: {
+            color: "#326CE5",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Terraform",
+          icon: "simple-icons:terraform",
+          style: {
+            color: "#326CE5",
+            "font-size": "50px",
+          },
+        },
+        {
+          skillName: "Kubernetes",
+          icon: "simple-icons:kubernetes",
+          style: {
+            color: "#326CE5",
+            "font-size": "50px",
+          },
+        },
       ],
     },
     {
       title: "Android Developement",
       fileName: "AndroidDevImg",
-      skills: [       
+      skills: [
         "⚡ Designing and building mobile applications for the Android platform using Java and Kotlin",
-        "⚡ Collaborating with cross-functional teams to define, design, and ship new features." ,
-        "⚡ Writing clean, maintainable, and testable code that meets the highest quality standards." ,
-        "⚡ Conducting code reviews to ensure that the code meets the best practices and adheres to the development standards." ,
-        "⚡ Troubleshooting and debugging issues related to the application, and providing timely resolutions." ,
-        "⚡ Developing and implementing new features based on user feedback and emerging trends in the mobile app development industry." ,
+        "⚡ Collaborating with cross-functional teams to define, design, and ship new features.",
+        "⚡ Writing clean, maintainable, and testable code that meets the highest quality standards.",
+        "⚡ Conducting code reviews to ensure that the code meets the best practices and adheres to the development standards.",
+        "⚡ Troubleshooting and debugging issues related to the application, and providing timely resolutions.",
+        "⚡ Developing and implementing new features based on user feedback and emerging trends in the mobile app development industry.",
         "⚡ Staying up-to-date with the latest trends, tools, and techniques in mobile app development, and sharing knowledge with the team.",
         "⚡ Collaborating with UI/UX designers to create an intuitive and attractive user interface.",
         "⚡ Ensuring that the application is compatible with different versions of the Android operating system and devices.",
@@ -185,93 +325,6 @@ const skills = {
             "font-size": "50px",
           },
         },
-      ],
-    },
-    {
-      title: "Cloud Infra-Architecture",
-      fileName: "CloudInfraImg",
-      skills: [
-        "⚡ Designing and implementing the necessary infrastructure to support the software development process.", 
-        "⚡ Automating the software development processto improve the efficiency of the software development process",
-        "⚡ Managing and maintaining CI/CD pipelines for managing and maintaining continuous integration and continuous delivery (CI/CD).", 
-        "⚡ Monitoring and troubleshooting to identify and resolve issues, and ensure the availability of the system.", 
-        "⚡ Collaborate with development, testing, and operations teams to ensure the smooth running of the software development process.",
-        "⚡ Manage and maintain cloud computing services and infrastructure, including deploying and scaling applications in the cloud.",
-      ],
-      tools: [
-        {
-          skillName: "Docker",
-            icon: "skill-icons:docker",
-            style: {
-              backgroundColor: "transparent",
-              "font-size": "50px",
-            },
-          },       
-        {
-          skillName: "Azure Devops",
-          icon: "skill-icons:azure-light",
-          style: {
-            backgroundColor: "transparent",
-            "font-size": "50px",
-          },
-        },
-        {
-          skillName: "Azure Portal",
-          icon: "teenyicons:azure-solid",
-          style: {
-            backgroundColor: "transparent",
-            color: "#3776AB",
-            "font-size": "50px",
-          },
-        },
-        {
-          skillName: "Jenkins",
-          icon: "skill-icons:jenkins-light",
-          style: {
-            backgroundColor: "transparent",
-            color: "#D00000",
-            "font-size": "50px",
-          },
-        },
-        {
-          skillName: "Jenkins",
-          icon: "skill-icons:powershell-light",
-          style: {
-            backgroundColor: "transparent",
-            color: "#D00000",
-            "font-size": "50px",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          icon: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-            "font-size": "50px",
-          },
-        },
-      ],
-    },
-    {
-      title: "Software Developement Tools",
-      fileName: "ToolsImg",
-      tools: [
-        {
-          skillName: "Visual Studio Code",
-          icon: "logos:visual-studio-code",
-          style: {
-            backgroundColor: "transparent",
-            "font-size": "50px",  
-          },
-        },
-        {
-          skillName: "Visual Studio",
-          icon: "logos:visual-studio",
-          style: {
-            backgroundColor: "transparent",
-            "font-size": "50px",    
-          },
-        },
         {
           skillName: "Android Studio",
           icon: "skill-icons:androidstudio-light",
@@ -279,7 +332,7 @@ const skills = {
             backgroundColor: "transparent",
             "font-size": "50px",
           },
-        },              
+        },
         {
           skillName: "MySql",
           icon: "skill-icons:mysql-light",
@@ -289,19 +342,10 @@ const skills = {
             "font-size": "50px",
           },
         },
-        {
-          skillName: "Postman",
-          icon: "skill-icons:postman",
-          style: {
-            backgroundColor: "transparent",
-            "font-size": "50px",
-          },
-        },
       ],
     },
   ],
 };
-
 
 // const skills1 = {
 //   data: [
@@ -802,25 +846,19 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "animated_ashutosh.png",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Android, Cloud and Opensource Development.",
-  },
-  blogSection: {
-    title: "Blogs",
-    subtitle:
-      "For individual fundamental empowerment, I like to write powerful lessons that create impact on each of the reader individually to change the core of their character.",
-    link: "https://ashutoshhathidara.wordpress.com",
-    avatar_image_path: "blogs_image.svg",
+      "Please feel free to reach out to me using the contact form below. I'm excited to connect with you.",
+    note: "Please note that while I strive to respond to all inquiries as promptly as possible, it may take up to 24-48 hours for me to reply. Your patience is greatly appreciated.",
   },
   addressSection: {
     title: "Address",
     subtitle:
-      "Ambavadi vas, Kanodar, T.A.-Palanpur, Dist.-Banaskantha, Gujarat - 385520",
+      "Mahaveer Nagar, Chhanera, New Harsud, Dist.-Khandwa, Madhya Pradesh - 450116",
     avatar_image_path: "address_image.svg",
     location_map_link: "https://goo.gl/maps/MpMqtRZytFchMkZ76",
   },
   phoneSection: {
     title: "Phone Number",
-    subtitle: "+91 8320758513",
+    subtitle: "+91 9098727192",
   },
 };
 
@@ -828,6 +866,7 @@ export {
   settings,
   seo,
   greeting,
+  menuItems,
   socialMediaLinks,
   skills,
   competitiveSites,

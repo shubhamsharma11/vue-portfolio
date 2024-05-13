@@ -25,20 +25,10 @@
           >
             <h1 class="text-h2 font-weight-bold">
               {{ experience.title }}
-            </h1>            
-          </v-row>
-          <v-row
-            align="center"
-            justify="center"
-          >
+            </h1> 
             <h2>
               {{ experience.subtitle }}
             </h2>
-          </v-row>
-          <v-row
-            align="center"
-            justify="center"
-          >
             <p class="text-body-1 font-weight-regular">
               {{ experience.description }}
             </p>
